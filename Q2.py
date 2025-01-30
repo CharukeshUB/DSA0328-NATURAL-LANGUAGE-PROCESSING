@@ -1,12 +1,7 @@
 #2
-# Define the states
 states = ["START", "S1", "S2", "ACCEPT"]
 current_state = "START"
-
-# Input string to be checked
 input_string = "xxabab"
-
-# Simulate the FSA step by step
 for char in input_string:
     if current_state == "START":
         if char == 'a':
@@ -27,8 +22,6 @@ for char in input_string:
             current_state = "S1"
         else:
             current_state = "START"  # Reset if any character follows 'ab'
-
-# Final check
 if current_state == "ACCEPT":
     print("The string ends with 'ab'.")
 else:
